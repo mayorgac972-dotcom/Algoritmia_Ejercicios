@@ -1,0 +1,30 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso de Administrador</title>
+<!-- Título: Admin -->
+<!-- Entrada: Ingrese si es usuario o admin -->
+<!-- Salida: Le concede el permiso si es admin -->
+<!-- Proceso: Verifica si la persona es admin o usuario -->
+
+</head>
+<body>
+    <h1>Validar acceso de administrador</h1>
+    <label for="usuario">Ingresa el usuario:</label>
+    <input type="text" id="usuario">
+    <button onclick="validarAcceso()">Ingresar</button>
+    <p id="resultado"></p>
+    <script>
+        function validarAcceso() {
+            const usuario = document.getElementById('usuario').value;
+            const resultado = document.getElementById('resultado');
+
+            if (usuario === 'admin') 
+            {resultado.textContent = `¡Acceso concedido! Bienvenido, administrador.`;} 
+            else {resultado.textContent = `Usuario incorrecto. Acceso denegado.`;}
+        }
+    </script>
+</body>
+</html>

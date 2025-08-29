@@ -1,0 +1,41 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo de Triángulo</title>
+<!-- Título: Triángulos -->
+<!-- Entrada: Pide las medidas de todos los lados del triángulo -->
+<!-- Salida: Indica qué tipo de triángulo es -->
+<!-- Proceso: Verifica cómo se clasifican los triángulos de acuerdo a ciertas reglas -->
+</head>
+<body>
+    <h1>Determinar si un triángulo es equilátero, isósceles o escaleno</h1>
+    <label for="lado1">Lado 1:</label>
+    <input type="number" id="lado1">
+    <br><br>
+    <label for="lado2">Lado 2:</label>
+    <input type="number" id="lado2">
+    <br><br>
+    <label for="lado3">Lado 3:</label>
+    <input type="number" id="lado3">
+    <button onclick="determinarTriangulo()">Determinar</button>
+    <p id="resultado"></p>
+    <script>
+        function determinarTriangulo() {
+            const lado1 = parseFloat(document.getElementById('lado1').value);
+            const lado2 = parseFloat(document.getElementById('lado2').value);
+            const lado3 = parseFloat(document.getElementById('lado3').value);
+            const resultado = document.getElementById('resultado');
+
+            if (lado1 <= 0 || lado2 <= 0 || lado3 <= 0) 
+            {resultado.textContent = 'Por favor, ingresa longitudes de lado válidas.';return;}
+
+            if (lado1 === lado2 && lado2 === lado3) {resultado.textContent = `Es un triángulo equilátero.`;} 
+            else if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) 
+            {resultado.textContent = `Es un triángulo isósceles.`;} 
+            else {resultado.textContent = `Es un triángulo escaleno.`;}
+        }
+    </script>
+</body>
+</html>

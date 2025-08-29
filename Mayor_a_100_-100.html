@@ -1,0 +1,29 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rango de Número</title>
+<!-- Título: Mayor o menor a 100 -->
+<!-- Entrada: Pide un número -->
+<!-- Salida: Dice si el número es menor o mayor a 100 -->
+<!-- Proceso: Verifica si el número ingresado es menor o mayor a 100 -->
+</head>
+<body>
+    <h1>Comprobar si un número es mayor a 100 o menor a -100</h1>
+    <label for="numero">Ingresa un número:</label>
+    <input type="number" id="numero">
+    <button onclick="verificarRango()">Verificar</button>
+    <p id="resultado"></p>
+    <script>
+        function verificarRango() {
+            const numero = document.getElementById('numero').value;
+            const resultado = document.getElementById('resultado');
+
+            if (numero > 100 || numero < -100) 
+            {resultado.textContent = `El número ${numero} es mayor a 100 o menor a -100.`;} 
+            else {resultado.textContent = `El número ${numero} está entre -100 y 100.`;}
+        }
+    </script>
+</body>
+</html>
