@@ -1,0 +1,35 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Voto</title>
+<!-- Título: Votación -->
+<!-- Entradas: Pide la edad -->
+<!-- Entrada: Pide la nacionalidad -->
+<!-- Salida: Indica si puede votar o no -->
+<!-- Proceso: Verifica si cumple con la edad mínima para votar y si la nacionalidad está permitida -->
+
+</head>
+<body>
+    <h1>Verificar si una persona puede votar</h1>
+    <label for="edad">Ingresa tu edad:</label>
+    <input type="number" id="edad">
+    <br><br>
+    <label for="nacionalidad">Ingresa tu nacionalidad:</label>
+    <input type="text" id="nacionalidad">
+    <button onclick="verificarVoto()">Verificar</button>
+    <p id="resultado"></p>
+    <script>
+        function verificarVoto() {
+            const edad = document.getElementById('edad').value;
+            const nacionalidad = document.getElementById('nacionalidad').value;
+            const resultado = document.getElementById('resultado');
+
+            if (edad >= 18 && nacionalidad.toLowerCase() === 'colombiana') 
+            {resultado.textContent = `¡Puedes votar!`;} 
+            else {resultado.textContent = `No puedes votar.`;}
+        }
+    </script>
+</body>
+</html>
