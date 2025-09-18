@@ -1,7 +1,7 @@
-#Nombre: Congelacion
-#Entradas: Ingrese la temperatura
-#Salida: Latemperatura es acta o no para la congelacion
-#Proceso: Ingrese la temperatura y luego le indica si las temperaturas es acta o no para la congelacion
+# Nombre: Congelación
+# Entrada: Ingrese en qué temperatura se encuentra
+# Salida: Indica si la temperatura es óptima o no para la congelación
+# Proceso: Pide los grados y luego realiza una operación para saber si se puede congelar o no
 
 temperatura = float(input("Ingresa la temperatura en °C: "))
 if temperatura <= 0:

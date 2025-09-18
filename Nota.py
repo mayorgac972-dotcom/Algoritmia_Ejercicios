@@ -1,10 +1,11 @@
-#Nombre: Nota
-#Entradas: Ingrese la nota del estudiante
-#Salida: El estudianteaprobo o reprobo
-#Proceso: Ingrese la nota del estudiante y el sistema verifica si aprobo o reprobo
+# Nombre: Nota
+# Entradas: Se pide al usuario que ingrese la nota
+# Salida: Indica si la persona aprobó o no
+# Proceso: Verifica, de acuerdo al año, el mínimo aprobatorio para pasar una materia 
 
-nota = float(input("Ingresa la nota del estudiante: "))
-if nota >= 60:
-    print("El estudiante aprobó.")
+NOTA_MINIMA_APROBATORIA = 70
+nota = float(input("Por favor, ingrese la nota del estudiante: ")) 
+if nota >= NOTA_MINIMA_APROBATORIA:
+    print("¡Felicidades! El estudiante ha APROBADO.")
 else:
-    print("El estudiante reprobó.")
+    print("Lo sentimos, el estudiante ha REPROBADO.")
